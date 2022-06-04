@@ -1,0 +1,17 @@
+Q: Is one sorting algorithm always faster than another?
+A: It seemed that the counting sorter always had the fastest time.
+
+Q: Above we said that BubbleSort, WipingBubbleSort, and InsertionSort each had the same Theta(N^2) asymptotic time complexity. How can you explain the differences in the plots for these three algorithms?
+A: Within these functions, there may be additional steps (such as swaps) that account for additional time making one function more complex than another.
+
+Q: What information can we gain from empirical analysis of algorithms which might not be as noticeable in asymptotical bounds?
+A: From empirical analysis of algorithms we can analyze the speed of algorithms that have the same asymptotical bounds.
+
+Q: For any given sorting algorithm, does increasing the array size always mean the sorting takes longer?
+A: Not always (i.e. Counting Sorter) but generally yes.
+
+Q: How does changing nrepeats change the plot?
+A: nrepeats seems to make the graph smoother and remove random outliers that may make the line appear not so smooth.
+
+Q: Is your plot the exact same as your partner's plot, even with the same values of ntrials, by, and nrepeats?
+A: As nrepeats increases, my plot begins to look more similar to my partner's, but it is never exactly the same.

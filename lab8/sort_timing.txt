@@ -1,0 +1,17 @@
+Q: Is one sorting algorithm always faster than another?
+A: Most of the time CountingSorter was the fastest algorithm, but in some cases JavaSorter was. Between these two, it seems that CounterSort was faster, however, most of the time esepcially once we got to higher N's so it seems that CountingSorter is generally faster.
+
+Q: Above we said that BubbleSort, WipingBubbleSort, and InsertionSort each had the same Theta(N^2) asymptotic time complexity. How can you explain the differences in the plots for these three algorithms?
+A: Although all algorithms had sort times of Theta(N^2), these sorts had different lower bounds (such as InsertionSort which best case could be 1) which makes some of them faster than the other.
+
+Q: What information can we gain from empirical analysis of algorithms which might not be as noticeable in asymptotical bounds?
+A: From empirical analysis of algorithms we can analyze the speed of algorithms that have the same Theta bounds but potentially different lower and upper bounds to analyze which is generally faster.
+
+Q: For any given sorting algorithm, does increasing the array size always mean the sorting takes longer?
+A: Not always (i.e. Counting Sorter) but generally yes. For example if you are always passing in a sorted array, no matter how large, the run time is still Theta(1), since it's sorted so that will not affect runtime.
+
+Q: How does changing nrepeats change the plot?
+A: nrepeats seems to make the graph smoother and remove random outliers that may make the line appear not so smooth.
+
+Q: Is your plot the exact same as your partner's plot, even with the same values of ntrials, by, and nrepeats?
+A: As nrepeats increases, my plot begins to look more similar to my partner's, but it is never exactly the same.

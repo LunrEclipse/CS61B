@@ -1,0 +1,44 @@
+#* java -ea ataxx.Main
+
+# Make sure that illegal moves are rejected during setup, and the
+# program exits normally.
+
+manual blue
+block a2
+# RED
+# Illegal for red
+a1-b1
+# OK
+a7-b7
+# BLUE
+# OK for blue
+g7-f7
+# RED
+# Illegal for red
+a1-b1
+dump
+# Illegal jump
+b7-b4
+# Illegal jump
+b7-e7
+# Illegal move to blocked square
+a7-a6
+# Illegal pass
+-
+# Out of bounds
+g1-h1
+# Out of bounds
+a7-a8
+# Bad syntax
+b7c7
+# OK
+a7-a5
+a1-a3
+dump
+# RED
+# Illegal move on top of an opponent
+a5-a3
+# Illegal move of non-existent piece
+c3-c4
+dump
+quit

@@ -1,0 +1,74 @@
+1a. Results for InsertRandomSpeedTest for N = 1000000:
+
+Inserting 1000000 random length 10 Strings into a StringSet of type BSTStringSet
+Took: 0.72 sec.
+
+Inserting 1000000 random length 10 Strings into a StringSet of type ECHashStringSet
+Took: 0.31 sec.
+
+Inserting 1000000 random length 10 Strings into a StringSet of type java.util.TreeSet
+Took: 0.77 sec.
+
+Inserting 1000000 random length 10 Strings into a StringSet of type java.util.HashSet
+Took: 0.28 sec.
+
+
+1b. Results for InsertRandomSpeedTest for N = 2000000:
+
+Inserting 2000000 random length 10 Strings into a StringSet of type BSTStringSet
+Took: 1.70 sec.
+
+Inserting 2000000 random length 10 Strings into a StringSet of type ECHashStringSet
+Took: 0.82 sec.
+
+Inserting 2000000 random length 10 Strings into a StringSet of type java.util.TreeSet
+Took: 1.78 sec.
+
+Inserting 2000000 random length 10 Strings into a StringSet of type java.util.HashSet
+Took: 0.63 sec.
+
+1c. Does your ECHashStringSet look roughly linear or roughly quadratic
+in its scaling behavior for random strings?
+
+My ECHashStringSet appears roughly linear in it's scaling behavior of random strings.
+
+
+2a. Results for InsertInOrderSpeedTest for N = 10000:
+
+Inserting 1000000 in-order strings into a StringSet of type BSTStringSet
+Took: 38.14 sec.
+
+Inserting 1000000 in-order strings into a StringSet of type ECHashStringSet
+Took: 0.29 sec.
+
+Inserting 1000000 in-order strings Strings into a StringSet of type java.util.TreeSet
+Took: 0.46 sec.
+
+Inserting 1000000 in-order strings Strings into a StringSet of type java.util.HashSet
+Took: 0.19 sec.
+
+2b. Results for InsertInOrderSpeedTest for N = 20000:
+
+Inserting 20000 in-order strings into a StringSet of type BSTStringSet
+Took: 1.05 sec.
+
+Inserting 20000 in-order strings into a StringSet of type ECHashStringSet
+Took: 0.01 sec.
+
+Inserting 20000 in-order strings Strings into a StringSet of type java.util.TreeSet
+Took: 0.01 sec.
+
+Inserting 20000 in-order strings Strings into a StringSet of type java.util.HashSet
+Took: 0.00 sec.
+
+
+2c. Does your **BST**StringSet look roughly linear or roughly
+quadratic in its scaling behavior for in order strings?
+
+My BST StringSet looks quadratic in it's scaling behavior.
+
+
+Before submitting, make sure that your ECHashStringSet is capable of
+handling inputs of size 1000000 in a reasonable amount of time (a few
+seconds).
+

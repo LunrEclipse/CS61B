@@ -1,0 +1,14 @@
+Q: Is one GrowList implementation always better than the others?
+A: I would say that overall GeoList is better than the others. Although at times (when we hit boundaries), other implementations may perform better, it seems that if you take the average of the average times, GrowList has the fastest run time.
+
+Q: Why is the runtime for N insertions into a geometrically resizing list a Theta(N) operation?
+A: The runtime for GeoList is Theta(N) because we have to copy over every single element when we hit a boundary which requires N steps, so the largest operation we ever have to commit is that of size N of the closest power of 2.
+
+Q: Why is the runtime for N insertions into a arithmetically resizing list a Theta(N^2) operation?
+A: Since we resize everytime that requires a looping through N at each N iteration which is N^2.
+
+Q: How does the runtime per operation for the ArithGrowList compare to that of GeomGrowList and JavaGrowList? Specifically look at the non-accumulated plots and desribe the trends for how long each operation takes as a function of how many elements have already been inserted in the list.
+A: The runtime per option for the ArithGrowList seems to be significantly larger than that of GeomGrow and JavaGrow. The ArithGrowList's runtime seems to increase as more elements are added (more elements have already been inserted into the list).
+
+Q: When are there spikes in the per operation runtime graphs for each of the implementations? Do these make sense to you? Hint: some of these should and others might not. Empirical runtime can be quite messy and depends on machine specifics which will be revealed in other subsequent classes like CS61C.
+A: There are spikes in the per operation runtime graphs for Geom and Java when the array needs to be resized. The spikes in ArithGrowList seem out of place, however, since we are resizing the array every time. We thought that these spikes might have to do with memory allocation, but not sure on that.

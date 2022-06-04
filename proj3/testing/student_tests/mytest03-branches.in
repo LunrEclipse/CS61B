@@ -1,0 +1,93 @@
+# Basic tests for commit, add, remove, and status
+# Makes sure that log and status update appropriately
+> init
+<<<
++ potato.txt potato.txt
++ notpotato.txt notpotato.txt
+> add potato.txt
+<<<
+> add notpotato.txt
+<<<
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+notpotato.txt
+potato.txt
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<
+> commit "Added potato.txt and notpotato.txt"
+<<<
+D HEADER "commit [a-f0-9]+"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+> log
+===
+${HEADER}
+${DATE}
+Added potato.txt and notpotato.txt
+
+===
+${HEADER}
+${DATE}
+initial commit
+
+<<<*
+I blank-status.inc
+> branch farm
+<<<
+> checkout farm
+<<<
+> rm notpotato.txt
+<<<
+> status
+=== Branches ===
+master
+*farm
+
+=== Staged Files ===
+
+=== Removed Files ===
+notpotato.txt
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<
+> commit "Removed notpotato.txt"
+<<<
+D UID "[a-f0-9]+"
+D HEADER "commit (${UID})"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+> log
+===
+${HEADER}
+${DATE}
+Removed notpotato.txt
+
+===
+${HEADER}
+${DATE}
+Added potato.txt and notpotato.txt
+
+===
+${HEADER}
+${DATE}
+initial commit
+
+<<<*
+# UID of second version
+D UID2 "${1}"
+# UID of current version
+D UID1 "${2}"
+> checkout ${UID1} -- notpotato.txt
+<<<
+= notpotato.txt notpotato.txt
+
